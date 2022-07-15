@@ -1,225 +1,176 @@
+:root{
+    --tipo-principal:'Montserrat', italic;
+    --blanco: rgb(255, 255, 255);
+}
+
 body {
-  background-image: url("../img/Cifrado.jpeg");
+    background-image: url("../img/Muñeco.png");
+}
+
+main {
+    margin-top: 70px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 20px;
+    padding: 10px 30px;
+    box-shadow: 10px 10px 10px 10px rgba(53, 245, 5, 0.801);
+    flex-direction: column;
+}
+
+.titulo {
+    background-color: rgba(255, 255, 255, 0.932);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.parrafo {
+   margin: 5px 0px;
+   background-color: var(--blanco);
+   border: 1px solid;
+   border-radius: 14px;
+}
+
+.text-area {
+    border-radius: 5px;
+    resize:horizontal;
+    box-shadow: 10px 10px 5px rgba(6, 207, 16, 0.767);
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+#text-cifrador {
+    background-color: rgba(6, 88, 240, 0.836);
+    color: var(--blanco);
+    text-align: center;
+    font-size: 2rem;
+    max-width: 100%;
+}
+
+#text-cifrador::placeholder {
+    text-align: center;
+    font-size: 2rem;
+    max-width: 100%;
+    color: #0a3871;
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+.centrar#error {
+    margin-top: 5px;
+    margin-left: 3px;
+    color: rgb(247, 4, 4);
+    justify-content: center;
+    font-size: 20px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 10px;
 }
 
 .centrar {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
+}
+
+.boton {
+    font-family: var(--tipo-principal);
+    font-size: 20px;
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.596);
+    border-radius: 10px;
+    width: 150px;
+}
+
+#boton-encriptar {
+    background-color: rgba(23, 165, 4, 0.897);
+    color: var(--blanco);
+}
+
+#boton-encriptar:hover{
+    background-color: rgb(216, 227, 231);
+    color: rgba(18, 109, 130, 0.562);
+}
+
+#boton-desencriptar {
+    background-color: rgba(36, 47, 207, 0.829);
+    color: var(--blanco);
+}
+
+#boton-desencriptar:hover {
+    background-color: rgb(50, 216, 9);
+    color:rgb(18, 110, 130);
+}
+
+#text-resultado {
+    text-align: center;
+    font-size: 2rem;
+    max-width: 100%;
+    color: #0a3871;
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+#text-resultado::placeholder {
+    color: rgba(3, 3, 3, 0.897);
+    font-size: 20px;
+}
+
+#boton-copiar:hover {
+    background-color: rgb(136, 190, 145);
+    color: var(--blanco);
+    border: 2px solid rgba(7, 241, 222, 0.596);
+}
+
+#boton-limpiar {
+    background-color: rgb(136, 190, 145);
+    color: var(--blanco);
+}
+#boton-limpiar:hover {
+    background-color: var(--blanco);
+    color: rgb(21, 17, 238);
+    border: 2px solid rgba(0, 0, 0, 0.596);
 }
 
 footer {
-  margin-top: 40px;
-  background-image: url("../img/Avatar-Muchacho.jpeg");
-  border: 1px solid;
-  border-radius: 10px;
+    margin-top: 40px;
+    border: 1px solid;
+    border-radius: 10px;
+    background-color: rgba(197, 204, 226, 0.932);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
 }
 
-/* =================
- * Breakpoints
- * =================
-
-/* ==============
- * Celular
- * ==============
- */
- .principal {
-  min-height: 75vh;
+@media (max-width: 1200px) {
+    main {
+        margin-left: 60px;
+        margin-right: 60px;
+    }
 }
 
-.logo {
-  height: 3rem;
-  color: ;
+@media (max-width: 800px) {
+    main {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 }
 
-.d-flex {
-  display: flex;
-}
-
-.d-none {
-  display: none;
-}
-
-.flex-column {
-  flex-direction: column;
-}
-
-.flex-row {
-  flex-direction: row;
-}
-
-.flex-grow {
-  flex-grow: 1;
-}
-
-#entrada {
-  text-align: center;
-  font-size: 2rem;
-  max-width: 100%;
-  margin: 2rem;
-  color: #0a3871;
-}
-
-::placeholder {
-  color: #7387a4;
-}
-
-.controles {
-  padding: 1.5rem;
-}
-
-header {
-  margin-top: 1.5rem;
-  padding-left: 1rem;
-}
-
-.advertencia {
-  height: 2rem;
-  font-size: 1rem;
-  justify-content: center;
-  align-items: center;
-}
-
-input.button {
-  color: #0A3871;
-  border: solid 1px #0A3871;
-  border-radius: 1.5rem;
-  padding: 1rem;
-  margin: 0.5rem 0px;
-  cursor: pointer;
-}
-
-input.button:hover,
-input.button:focus {
-  background-color: #0A3871;
-  color: #fff;
-  border: solid 1px #000;
-}
-
-.barra-lateral {
-  background-color: #fff;
-  border: solid 1px #ddd;
-  border-radius: 1rem;
-  margin: 1rem;
-  padding: 1rem;
-  min-height: calc(25vh - 2rem);
-  color: #495057;
-}
-
-.my-auto {
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-.info {
-  text-align: center;
-}
-
-.icon-info {
-  width: 1rem;
-  height: 1rem;
-  display: inline-block;
-  margin: 0px 0.5rem;
-}
-
-.info-txt strong{
-  color: #343A40;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.barra-lateral {
-  position: relative;
-}
-
-.barra-lateral .button {
-  position: absolute;
-  visibility: hidden;
-  top: 0.5rem;
-  right: 0.5rem;
-  border-radius: 0.5rem;
-  padding: 0.5rem;
-}
-
-.barra-lateral.con-salida .button {
-  visibility: visible;
-}
-
-.barra-lateral.con-salida .info {
-  display:  none;
-}
-
-#salida {
-  font-size: 1.5rem;
-  max-width: 100%;
-  word-break: break-all;
-  overflow-y: auto;
-}
-
-/* =============
- * Tablet
- * =============
- */
-@media only screen and (min-width: 375px) {
-  .d-sm-flex {
-    display:  flex;
-  }
-
-  .flex-sm-column {
-    flex-direction: column;
-  }
-
-  .flex-sm-row {
-    flex-direction: row;
-  }
-
-  .flex-sm-grow {
-    flex-grow: 1;
-  }
-
-  input.button {
-    border-radius: 1rem;
-    margin: 0px 1rem;
-  }
-
-}
-/* ==============
- * Desktop
- * ==============
- */
-@media only screen and (min-width: 768px) {
-  .d-md-flex {
-    display:  flex;
-  }
-
-  .d-md-block {
-    display: block;
-  }
-
-  .flex-md-column {
-    flex-direction: column;
-  }
-
-  .flex-md-row {
-    flex-direction: row;
-  }
-
-  .flex-md-grow {
-    flex-grow: 1;
-  }
-
-  .principal {
-    width: 70%;
-  }
-  
-  .footer {
-    width: 100%;
-  }
-
-  .barra-lateral {
-    width: 30%;
-  }
-
-  body {
-    height: 100vh;
-  }
+@media (max-width: 500px) {
+    .botones {
+        flex-direction: column;
+    }
+    
+    .boton {
+        width: 100%;
+    }
+    
+    main {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
 }

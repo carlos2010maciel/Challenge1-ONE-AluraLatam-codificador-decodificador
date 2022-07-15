@@ -1,81 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
-
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- viewport (ventana de visualización) es el área visble del usuario de una página web -->
-
 	<!-- width=device-width establece el ancho de la página para seguir el ancho de pantalla del dispositivo (que variará según el dispositivo).-->
-
 	<!-- initial-scale=1.0 establece el nivel de zoom inicial cuando el navegador carga la página por primera vez. -->
-
 	<meta name="author" content="Horacio Carlos Maciel de Lima">
-
 	<meta name="description" content="Encriptador de texto construido con Javascript">
-
 	<meta name="keywords" content="html, css, Javascript, Oracle, Oracle ONE, Alura, Alura Latam, Curso, Lógica de programación">
-
-	<title>Challenge 1 - Alura Latam - Codificador-Decodificador en Javascript</title>
-
+	<title>Challenge 1 - Alura Latam - Codificador - Decodificador en Javascript</title>
 	<link rel="icon" href="img/Logo.png">
-
 	<link href="fonts/EduTASBeginner-Regular.ttf" rel='stylesheet' type='text/css'>
-
     <link href="fonts/Montserrat-Italic.ttf" rel='stylesheet' type='text/css'>
-
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="d-md-flex flex-md-row">
-    <div class="principal d-flex flex-column">
+<body>
+    <header> 
+        <h1><span class="titulo">Encriptador desencriptador de texto en Javascript</span></h1>
+    </header>
 
-        <header>
-            <img src="./img/Logo.png" class="logo" alt="Logo de Alura Latam"/>
-            <!-- Imagen logo de Alura. El atributo "alt" es para agregar un texto descriptivo
-            cuyo propósito es transmitir información a los usuarios ciegos sobre el contenido
-            y el propósito de la imagen --> 
-        </header>
+    <main>
+        <p class="centrar parrafo">Sólo se admiten letras minúsculas y sin acentos.</p>
 
-        <div class="d-flex flex-column flex-grow">
-            <textarea id="entrada" class="flex-grow" placeholder="Ingrese el texto aquí"></textarea>
+        <div class="centrar">
+            <textarea class="text-area" id="text-cifrador" cols="60" rows="10" placeholder="Ingrese el texto aquí"></textarea>
         </div>
-
-        <div class="controles">
-            <div class="advertencia d-flex">
-                <img src="./img/Exclamación triángulo naranja 20x20.png" class="exclamación" alt="Símbolo de exclamación dentro de un triángulo de color amarillo con bordes de color naranja/>
-                <span class="icon-info"></span><small>Solo letras minúsculas y sin acentos</small>
-            </div>
-            
-            <div class="d-flex flex-column flex-sm-row">
-                <input type="button" class="button flex-sm-grow" value="Codificar" onclick="uiCodificar()"/>
-                <input type="button" class="button flex-sm-grow" value="Decodificar" onclick="uiDecodificar()"/>
-            </div>
+        
+        <span class="centrar" id="error" class="invisible"></span>
+        
+        <div class="centrar botones">
+            <button class="boton" id="boton-encriptar">Encriptar</button>
+            <button class="boton" id="boton-desencriptar">Desencriptar</button>
         </div>
-    </div>
-    <div class="barra-lateral d-flex flex-column">
-        <div class="info d-flex flex-column flex-grow">
-            <div class="info-img d-none d-md-block">
-                <img src="./img/Muñeco.png" alt="Imagen de un muñecco sosteniendo una lupa en su mano derecha mientras observa un diamante"/> <!-- Imagen del muñeco -->
-            </div>
-            
-            <div class="info-txt my-auto">
-                <strong>Ningún mensaje fue encontrado</strong><br />
-                <span>Ingresa el texto que desees codificar o decodificar</span>
-            </div>
+       
+        <div class="centrar">
+            <textarea class="text-area" id="text-resultado" cols="60" rows="10" placeholder="Resultado" readonly></textarea>
         </div>
-
-        <div id="salida"></div>
-
-            <input type="button" class="button copiar" onclick="uiCopiar()" value="copiar" />
-    </div>
+        
+        <div class="centrar botones">
+            <button class="boton" id="boton-copiar" type="submit">Copiar</button>
+            <button class="boton" id="boton-limpiar" type="submit">Limpiar</button>
+        </div>
+    </main>  
     
-    <footer class="footer">
-        <small class="centrar">Copyright &copy 2022 - Horacio Carlos Maciel de Lima </small>
+    <footer>
+        <small class="centrar footer">Copyright &copy 2022 - Horacio Carlos Maciel de Lima</small>
     </footer>
-    
-    <script src="./app.js"></script>
 
+    <script src="./js/app.js"></script>
+    <script src="./js/eventos.js"></script>
 </body>
 </html>
