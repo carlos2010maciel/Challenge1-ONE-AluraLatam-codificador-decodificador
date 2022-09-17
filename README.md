@@ -30,4 +30,5 @@ La página contiene:
 Un botón que copia el texto encriptado/desencriptado para la sección de transferencia, o sea que tiene la misma funcionalidad del ctrl+C o de la opción "copiar" del menú de las aplicaciones.-
 
 ## RESPONSIVE DESIGN:
-* Esta versión NO es responsiva.
+* Esta versión se adapta a escritorios y tablet.
+* Próximamente versión para dispositivos móviles.
